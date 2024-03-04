@@ -1,0 +1,47 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  background-color: var(--color-dark-700);
+
+  :nth-child(2) {
+    text-decoration: none;
+  }
+
+  .text {
+    line-height: var(--line-height-l);
+    color: transparent;
+    text-shadow: 2px 2px 2px rgb(0 100 155 / 50%);
+    letter-spacing: 1px;
+
+    background: linear-gradient(to bottom, red, yellow);
+    background-clip: text;
+  }
+
+  .contacts {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (width<=540px) {
+  .root {
+    flex-direction: column-reverse;
+    margin-bottom: 10px;
+
+    .contacts {
+      margin-top: 10px;
+    }
+
+    .text {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
