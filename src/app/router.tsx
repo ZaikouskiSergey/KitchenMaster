@@ -1,5 +1,6 @@
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 
+import { MainPage } from '@/pages/mainPage/MainPage'
 import { Footer } from '@/widgets/footer'
 import { Header } from '@/widgets/header'
 
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
   {
     children: [
       {
-        element: <div>Hello world!</div>,
+        element: <MainPage />,
         path: '/',
       },
     ],
