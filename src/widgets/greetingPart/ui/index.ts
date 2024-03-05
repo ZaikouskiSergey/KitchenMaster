@@ -1,0 +1,1 @@
+export { GreetingPart } from './GreetingPart'
