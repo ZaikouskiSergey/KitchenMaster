@@ -1,0 +1,46 @@
+.rootHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .input {
+    min-width: 75px;
+    max-width: 100px;
+    margin-right: 10px;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    text-decoration: none;
+
+    .text {
+      line-height: var(--line-height-l);
+      color: transparent;
+      text-shadow: 2px 2px 2px rgb(0 100 155 / 50%);
+      letter-spacing: 1px;
+
+      background: linear-gradient(to bottom, red, yellow);
+      background-clip: text;
+    }
+  }
+}
+
+@media screen and (width<= 470px) {
+  .link {
+    :first-child {
+      display: none;
+    }
+  }
+}
+
+@media screen and (width<= 400px) {
+  .root {
+    flex-direction: column;
+
+    .text {
+      margin-bottom: 0;
+    }
+  }
+}
