@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 20px;
 
   .input {
     min-width: 75px;
@@ -12,7 +13,10 @@
   .link {
     display: flex;
     align-items: center;
+
+    width: 100%;
     margin-left: 10px;
+
     text-decoration: none;
 
     .text {
@@ -20,6 +24,7 @@
       color: transparent;
       text-shadow: 2px 2px 2px rgb(0 100 155 / 50%);
       letter-spacing: 1px;
+      white-space: nowrap;
 
       background: linear-gradient(to bottom, red, yellow);
       background-clip: text;
@@ -27,20 +32,25 @@
   }
 }
 
-@media screen and (width<= 470px) {
-  .link {
-    :first-child {
-      display: none;
+@media screen and (width<= 560px) {
+  .rootHeader {
+    .link {
+      :first-child {
+        display: none;
+      }
     }
   }
 }
 
-@media screen and (width<= 400px) {
-  .root {
+@media screen and (width<= 450px) {
+  .rootHeader {
     flex-direction: column;
+    margin: 5px 5px 0;
+    padding: 0;
 
     .text {
-      margin-bottom: 0;
+      margin-bottom: 10px;
+      padding-bottom: 0;
     }
   }
 }

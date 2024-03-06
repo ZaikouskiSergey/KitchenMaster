@@ -1,7 +1,7 @@
 import { SeparateLine } from '@/shared/ui'
 import { GreetingPart } from '@/widgets/greetingPart'
-import { MainSearch } from '@/widgets/mainSearch'
 import { RandomMeals } from '@/widgets/randomMeals'
+import { SearchAndInfo } from '@/widgets/searchAndInfo'
 
 import s from './MainPage.module.scss'
 
@@ -10,7 +10,7 @@ export const MainPage = () => {
     <div className={s.rootMainPage}>
       <GreetingPart />
       <SeparateLine />
-      <MainSearch />
+      <SearchAndInfo />
       <SeparateLine />
       <RandomMeals />
       <SeparateLine />
