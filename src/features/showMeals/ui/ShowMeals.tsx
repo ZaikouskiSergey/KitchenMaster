@@ -10,7 +10,7 @@ type Props = {
 export const ShowMeals = ({ aboutMeals }: Props) => {
   const navigate = useNavigate()
   const selectCategoryHandler = () => {
-    navigate('/')
+    navigate(`/category/${aboutMeals.strCategory}`)
   }
 
   return (
