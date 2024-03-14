@@ -1,5 +1,6 @@
 import { SeparateLine } from '@/shared/ui'
 import { GreetingPart } from '@/widgets/greetingPart'
+import { MealCategories } from '@/widgets/mealCategories'
 import { RandomMeals } from '@/widgets/randomMeals'
 import { SearchAndInfo } from '@/widgets/searchAndInfo'
 
@@ -13,6 +14,8 @@ export const MainPage = () => {
       <SearchAndInfo />
       <SeparateLine />
       <RandomMeals />
+      <SeparateLine />
+      <MealCategories />
       <SeparateLine />
     </div>
   )
