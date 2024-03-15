@@ -1,10 +1,10 @@
 import { CategoryType, useGetListOfCategoriesQuery } from '@/entities/meals/model/servieces/meals'
-import { ShowMeals } from '@/features/showMeals'
+import { ShowCategory } from '@/features/showCategory'
 import { Typography } from '@/shared/ui'
 
 import s from './MealCategories.module.scss'
 export const MealCategories = () => {
-  const { data } = useGetListOfCategoriesQuery()
+  const { data } = useGetListOfCategoriesQuery({})
   const categoriesOfMeal = data ? data.categories : ([] as Array<CategoryType>)
 
   return (
@@ -14,7 +14,7 @@ export const MealCategories = () => {
       </Typography>
       <div className={s.oneOfCategory}>
         {categoriesOfMeal.map(el => {
-          return <ShowMeals aboutMeals={el} key={el.idCategory} />
+          return <ShowCategory aboutMeals={el} key={el.idCategory} />
         })}
       </div>
     </div>
