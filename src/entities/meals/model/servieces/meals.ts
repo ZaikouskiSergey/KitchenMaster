@@ -2,6 +2,12 @@ import { baseAPI } from '@/shared/api/baseAPI'
 
 export const mealsAPI = baseAPI.injectEndpoints({
   endpoints: builder => ({
+    getInfoAboutMealByName: builder.query<MealsResponse, any>({
+      query: ({ name }) => ({
+        method: 'GET',
+        url: `search.php?s=${name}`,
+      }),
+    }),
     getListMealsByFirstLetter: builder.query<MealsResponse, any>({
       query: ({ letter }) => ({
         method: 'GET',
@@ -17,7 +23,11 @@ export const mealsAPI = baseAPI.injectEndpoints({
   }),
 })
 
-export const { useGetListMealsByFirstLetterQuery, useGetListOfCategoriesQuery } = mealsAPI
+export const {
+  useGetInfoAboutMealByNameQuery,
+  useGetListMealsByFirstLetterQuery,
+  useGetListOfCategoriesQuery,
+} = mealsAPI
 
 export type CategoriesResponse = {
   categories: Array<CategoryType>
