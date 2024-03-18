@@ -1,3 +1,57 @@
 .rootMeal {
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  max-width: 1100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.secondPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 30px 55px 10px;
+
+  text-align: center;
+}
+
+.firstPart {
+  display: flex;
+  flex-direction: row;
+  margin: 0 30px;
+
+  .drinkView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 200px;
+    max-width: 400px;
+
+    img {
+      cursor: pointer;
+      width: 100%;
+    }
+  }
+}
+
+.modalContent {
+  position: relative;
+
+  img {
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (width<=780px) {
+  .firstPart {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
 }
