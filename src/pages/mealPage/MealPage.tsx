@@ -46,7 +46,7 @@ export const MealPage = () => {
           ))}
 
           <Typography as={'p'} variant={'small'}>
-            Serve: {properMeal.strGlass}
+            Serve: {properMeal.strMeal}
           </Typography>
         </div>
       </div>
