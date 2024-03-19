@@ -1,0 +1,44 @@
+.ingredientRoot {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-bottom: 10px;
+
+  .imagePart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+
+    img {
+      cursor: pointer;
+      max-width: 400px;
+    }
+  }
+
+  .mealsPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.modalContent {
+  position: relative;
+
+  img {
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (width<=820px) {
+  .ingredientRoot {
+    .showsPart {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}
