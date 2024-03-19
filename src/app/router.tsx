@@ -1,6 +1,7 @@
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 
 import { BrowseMealByLetterPage } from '@/pages/browseMealByLetterPage'
+import { IngredientsPage } from '@/pages/ingredientsPage/IngredientsPage'
 import { MainPage } from '@/pages/mainPage/MainPage'
 import { MealByCategoryPage } from '@/pages/mealByCategoryPage/MealByCategoryPage'
 import { MealPage } from '@/pages/mealPage/MealPage'
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         element: <MealPage />,
         path: 'meal/:name',
+      },
+      {
+        element: <IngredientsPage />,
+        path: 'ingredient/:name',
       },
     ],
     element: <Layout />,

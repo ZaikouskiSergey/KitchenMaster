@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router-dom'
 
-import { ListMealsType } from '@/entities/meals/model/servieces/meals'
+import { ListMealsType, MealsContainIngredientType } from '@/entities/meals/model/servieces/meals'
 import { Typography } from '@/shared/ui'
 
 import s from './ShowMeal.module.scss'
 
 type Props = {
-  aboutMeals: ListMealsType
+  aboutMeals: ListMealsType | MealsContainIngredientType
 }
 export const ShowMeal = ({ aboutMeals }: Props) => {
   const navigate = useNavigate()
