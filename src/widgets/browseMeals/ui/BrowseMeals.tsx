@@ -1,10 +1,10 @@
-import { ListMealsType } from '@/entities/meals/model/servieces/meals'
+import { ListMealsType, MealsContainIngredientType } from '@/entities/meals/model/servieces/meals'
 import { ShowMeal } from '@/features/showMeal'
 
 import s from './BrowseMeals.module.scss'
 
 type Props = {
-  listOfMeals: Array<ListMealsType>
+  listOfMeals: Array<ListMealsType> | Array<MealsContainIngredientType>
 }
 export const BrowseMeals = ({ listOfMeals }: Props) => {
   return (

@@ -20,6 +20,12 @@ export const mealsAPI = baseAPI.injectEndpoints({
         url: 'categories.php',
       }),
     }),
+    getMealsContainIngredient: builder.query<IngredientResponse, any>({
+      query: ({ ingredient }) => ({
+        method: 'GET',
+        url: `filter.php?i=${ingredient}`,
+      }),
+    }),
   }),
 })
 
@@ -27,6 +33,7 @@ export const {
   useGetInfoAboutMealByNameQuery,
   useGetListMealsByFirstLetterQuery,
   useGetListOfCategoriesQuery,
+  useGetMealsContainIngredientQuery,
 } = mealsAPI
 
 export type CategoriesResponse = {
@@ -38,6 +45,14 @@ export type CategoryType = {
   strCategory: string
   strCategoryDescription: string
   strCategoryThumb: string
+}
+export type IngredientResponse = {
+  meals: Array<MealsContainIngredientType>
+}
+export type MealsContainIngredientType = {
+  idMeal: string
+  strMeal: string
+  strMealThumb: string
 }
 export type MealsResponse = {
   meals: Array<ListMealsType>
