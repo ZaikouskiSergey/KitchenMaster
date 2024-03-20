@@ -16,8 +16,7 @@ export const MainSearch = ({ isSign, placeholder }: Props) => {
   const redirectToPage = () => {
     if (value.trim() !== '') {
       setValue('')
-      navigate(`/`)
-      // navigate(`browse/search/${value}`)
+      navigate(`browse/search/${value}`)
     }
   }
 
