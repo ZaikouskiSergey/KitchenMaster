@@ -1,5 +1,6 @@
 import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 
+import { BrowseMealByCountryPage } from '@/pages/browseMealByCountry/BrowseMealByCountryPage'
 import { BrowseMealByLetterPage } from '@/pages/browseMealByLetterPage'
 import { BrowseMealBySearchPage } from '@/pages/browseMealBySearchPage'
 import { IngredientsPage } from '@/pages/ingredientsPage/IngredientsPage'
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
       {
         element: <BrowseMealBySearchPage />,
         path: 'browse/search/:letters',
+      },
+      {
+        element: <BrowseMealByCountryPage />,
+        path: 'browse/:country',
       },
     ],
     element: <Layout />,
