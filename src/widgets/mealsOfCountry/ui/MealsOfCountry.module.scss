@@ -1,0 +1,13 @@
+.rootCountries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 45px 15px;
+
+  .flags {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+}

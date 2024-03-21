@@ -14,6 +14,12 @@ export const mealsAPI = baseAPI.injectEndpoints({
         url: `filter.php?c=${category}`,
       }),
     }),
+    getListMealsByCountry: builder.query<IngredientResponse, any>({
+      query: ({ country }) => ({
+        method: 'GET',
+        url: `filter.php?a=${country}`,
+      }),
+    }),
     getListMealsByFirstLetter: builder.query<MealsResponse, any>({
       query: ({ letter }) => ({
         method: 'GET',
@@ -38,6 +44,7 @@ export const mealsAPI = baseAPI.injectEndpoints({
 export const {
   useGetInfoAboutMealByNameQuery,
   useGetListMealsByCategoryQuery,
+  useGetListMealsByCountryQuery,
   useGetListMealsByFirstLetterQuery,
   useGetListOfCategoriesQuery,
   useGetMealsContainIngredientQuery,

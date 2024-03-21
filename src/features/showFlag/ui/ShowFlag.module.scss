@@ -1,0 +1,23 @@
+.rootFlag {
+  position: relative;
+  width: 60px;
+
+  .info {
+    pointer-events: none;
+
+    position: absolute;
+    z-index: 5;
+
+    padding: 2px;
+
+    color: var(--color-accent-700);
+    white-space: nowrap;
+
+    background-color: var(--color-light-900);
+    border-radius: 4px;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+}
