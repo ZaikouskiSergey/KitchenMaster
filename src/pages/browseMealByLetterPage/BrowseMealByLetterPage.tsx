@@ -17,7 +17,7 @@ export const BrowseMealByLetterPage = () => {
   return (
     <div className={s.rootByLetter}>
       <Typography as={'h3'} variant={'extra_large'}>
-        Browse Meals
+        {listOfMeals ? 'Browse Meals' : 'No meals found'}
       </Typography>
       <BrowseMeals listOfMeals={listOfMeals} />
     </div>

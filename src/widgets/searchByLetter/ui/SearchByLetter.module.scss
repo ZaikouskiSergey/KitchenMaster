@@ -4,8 +4,7 @@
   align-items: center;
   justify-content: center;
 
-  max-width: 1100px;
-  margin: 0 auto;
+  color: #e8e0e0;
 
   .alphabet {
     cursor: pointer;
@@ -15,17 +14,17 @@
     gap: 4px;
     justify-content: center;
 
-    margin: 0 35px 20px;
+    margin: 0 35px 30px;
 
     span:last-child {
-      color: var(--color-success-700);
+      color: var(--color-success-100);
     }
 
     .everyLetter {
-      color: var(--color-success-700);
+      color: var(--color-success-100);
 
       &:hover {
-        color: var(--color-success-100);
+        color: var(--color-success-900);
         text-decoration: underline;
       }
     }

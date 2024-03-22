@@ -14,9 +14,9 @@ export const MainPage = () => {
       <SeparateLine />
       <SearchAndInfo />
       <SeparateLine />
-      <RandomMeals />
-      <SeparateLine />
       <MealCategories />
+      <SeparateLine />
+      <RandomMeals />
       <SeparateLine />
       <MealsOfCountry />
       <SeparateLine />
