@@ -36,7 +36,7 @@ export const ShowFlag = ({ nationality }: Props) => {
       </svg>
       {isHovered && (
         <div className={s.info} style={{ left: position.x - 35, top: position.y - 30 }}>
-          <Typography variant={'large'}>{nationality}</Typography>
+          <Typography variant={'small_bold'}>{nationality}</Typography>
         </div>
       )}
     </div>
