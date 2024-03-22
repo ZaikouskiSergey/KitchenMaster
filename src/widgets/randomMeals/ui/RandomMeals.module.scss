@@ -1,2 +1,11 @@
 .rootMeals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+
+  :first-child {
+    margin-bottom: 5px;
+    color: #e8e0e0;
+  }
 }

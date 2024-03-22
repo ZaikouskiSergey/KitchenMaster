@@ -38,6 +38,12 @@ export const mealsAPI = baseAPI.injectEndpoints({
         url: `filter.php?i=${ingredient}`,
       }),
     }),
+    getOneRandomMeal: builder.query<MealsResponse, any>({
+      query: () => ({
+        method: 'GET',
+        url: `random.php`,
+      }),
+    }),
   }),
 })
 
@@ -48,6 +54,7 @@ export const {
   useGetListMealsByFirstLetterQuery,
   useGetListOfCategoriesQuery,
   useGetMealsContainIngredientQuery,
+  useGetOneRandomMealQuery,
 } = mealsAPI
 
 export type CategoriesResponse = {
