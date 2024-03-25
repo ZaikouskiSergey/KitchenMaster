@@ -25,11 +25,13 @@ export const IngredientsPage = () => {
           <Typography as={'h3'} variant={'extra_large'}>
             {name}
           </Typography>
-          <img
-            alt={name}
-            onClick={() => setShowPicture(true)}
-            src={`https://www.themealdb.com/images/ingredients/${name}.png`}
-          />
+          <div className={s.image}>
+            <img
+              alt={name}
+              onClick={() => setShowPicture(true)}
+              src={`https://www.themealdb.com/images/ingredients/${name}.png`}
+            />
+          </div>
         </div>
         <div className={s.mealsPart}>
           <Typography as={'h3'} variant={'extra_large'}>

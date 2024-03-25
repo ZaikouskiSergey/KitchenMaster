@@ -8,14 +8,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    width: 400px;
-
     color: #e8e0e0;
 
-    img {
-      cursor: pointer;
-      max-width: 400px;
+    .image {
+      img {
+        cursor: pointer;
+        max-width: 400px;
+      }
     }
   }
 
@@ -37,12 +36,33 @@
   }
 }
 
-@media screen and (width<=820px) {
+@media screen and (width<=870px) {
   .ingredientRoot {
-    .showsPart {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+
+    padding: 0 10px;
+
+    .imagePart {
+      .image {
+        img {
+          max-width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width <=430px) {
+  .ingredientRoot {
+    .imagePart {
+      .image {
+        img {
+          max-width: 100%;
+        }
+      }
     }
   }
 }
