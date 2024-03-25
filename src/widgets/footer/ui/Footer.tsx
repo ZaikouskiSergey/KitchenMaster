@@ -15,7 +15,7 @@ export const Footer = () => {
           © 2024 KitchenMaster
         </Typography>
       </div>
-      <Link to={'https://bar-master.vercel.app/'}>
+      <Link target={'_blank'} to={'https://bar-master.vercel.app/'}>
         <h2 className={s.text}>The BarMaster</h2>
       </Link>
       <div className={s.contacts}>

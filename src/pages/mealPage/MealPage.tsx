@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 
 import {
   ListMealsType,
@@ -25,10 +25,18 @@ export const MealPage = () => {
     <>
       <div className={s.rootMeal}>
         <div className={s.firstPart}>
-          <div className={s.drinkView}>
-            <Typography as={'h3'} variant={'extra_large'}>
-              {properMeal?.strMeal}
-            </Typography>
+          <div className={s.mealView}>
+            {properMeal.strYoutube ? (
+              <NavLink target={'_blank'} to={properMeal.strYoutube}>
+                <Typography as={'h3'} variant={'extra_large'}>
+                  {properMeal?.strMeal}
+                </Typography>
+              </NavLink>
+            ) : (
+              <Typography as={'h3'} variant={'extra_large'}>
+                {properMeal?.strMeal}
+              </Typography>
+            )}
             <img
               alt={properMeal?.strMeal}
               onClick={() => setShowPicture(true)}
